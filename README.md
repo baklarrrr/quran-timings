@@ -61,14 +61,15 @@ lands where it should.
 5. **Checks.** A surah is published only when at least 97% of its words are placed, at most 3% of them (or one
    word) have unclear letters, no more than three unclear words come in a row, and at most 10% of its ayahs (or
    one ayah) are left out. A left-out ayah is accepted only when its letters are not heard in the audio around it,
-   and every one published was also read back from the model's transcript of the recording. When a
+   and each one published here was also checked by eye against the model's transcript of the recording. When a
    recording holds only the first part of a surah, the ayah it stops after is found from the model's reading of
    its last minute and a half, and only those ayahs are timed.
 
 ## Accuracy
 
-Measured against Quran.com's own word timings, on seven recordings by seven reciters that played no part in
-setting the method (3866 words):
+Measured against Quran.com's own word timings, on seven recordings by seven reciters (3866 words). None of
+these recordings was used to fit the settings; Alafasy's Al-Mulk is by a reciter whose Ya-Sin was in the fitting set
+(with Husary's Al-Fatiha and Al-Ikhlas).
 
 | Recording (Quran.com) | Words | Start error, median | 90th percentile | Reference drift per 10 min |
 |---|---|---|---|---|
