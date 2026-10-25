@@ -1,4 +1,4 @@
-> **🕌 For Bakar: Word timings for 4 reciters (Yasser Al-Dosari, Maher Al-Muaiqly, Nasser Al-Qatami, Islam Sobhi) are here, 428 surah recordings in all, ready for Quran Glass to light each word. Omar Hisham's timings are made but not published, because the only per-surah copy of his recitations is an unofficial archive.org upload; they go live when you say so. Correction (25 October 2026): this page used to say some recordings leave out certain ayahs. That was wrong: a check found almost all of those ayahs are recited; they just have no word timing yet.**
+> **🕌 For Bakar: Word timings for 4 reciters (Yasser Al-Dosari, Maher Al-Muaiqly, Nasser Al-Qatami, Islam Sobhi) are here, 422 surah recordings in all, ready for Quran Glass to light each word. Omar Hisham's timings are made but not published, because the only per-surah copy of his recitations is an unofficial archive.org upload; they go live when you say so. Correction (25 October 2026): this page used to say some recordings leave out certain ayahs. That was wrong: a check found almost all of those ayahs are recited; they just have no word timing yet.**
 
 # Quran recitation word timings
 
@@ -14,16 +14,17 @@ file from its source.
 | Reciter | Audio source | Surahs | Notes |
 |---|---|---|---|
 | Yasser Al-Dosari | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 107 | no word timing for 15:50; 23:58; 27:75; 55:47, 51; 56:8, 40; 77:34, 45 |
-| Maher Al-Muaiqly | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 109 | no word timing for 18:89; 37:175; 55:18, 45, 49, 51, 61, 63; 77:34, 45; 79:3; 91:4; 94:5; 102:4 |
+| Maher Al-Muaiqly | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 105 | no word timing for 18:89; 37:175; 77:34, 45; 94:5; held back until aligned again: surah 55, 79, 91, 102 |
 | Nasser Al-Qatami | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 106 | no word timing for 7:25; 36:58; 37:165; 55:16, 30, 45, 53; 77:34; 79:3; 82:17; 94:5 |
-| Islam Sobhi | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 106 | no word timing for 3:70; 55:36, 47; 56:39; 59:22; 77:47; 79:3; 102:3 |
+| Islam Sobhi | [mp3quran.net (Rewayat Hafs A'n Assem - Murattal)](https://mp3quran.net/eng) | 104 | no word timing for 55:36, 47; 56:39; 59:22; 77:47; 102:3; held back until aligned again: surah 3, 79 |
 
 The ayahs in the Notes column are ones the aligner could not place, not ayahs missing from the recordings. An
-independent check on 2026-10-25 ran the same recognition model over the audio around each of these 42 ayahs and
-read at least 70% of the ayah's letters, in order, for 38 of them (most word for word, for example Islam Sobhi's
-55:47 and 102:3); three more were partly read and one was inconclusive. Until they are aligned again, they stay
-untimed: a player should show such an ayah's text, unlit, while it is recited (between the last timed word before
-it and the next timed ayah), and never say the reciter left it out.
+independent check on 2026-10-25 ran the same recognition model over the audio around each of the 42 ayahs then
+marked and read at least 70% of the ayah's letters, in order, for 38 of them (most word for word); three more were
+partly read and one was inconclusive. Until they are aligned again they stay untimed: a player should show such an
+ayah's text, unlit, while it is recited (between the last timed word before it and the next timed word), and never
+say the reciter left it out. A surah where that stretch is too short to hold the ayah (its audio lies inside a
+neighbouring word's timing) is held back until it is aligned again.
 
 All are Hafs 'an 'Asim, murattal. [mp3quran.net](https://mp3quran.net/eng) offers a free public API for
 developers but states no licence for its audio; the recordings remain the work of their reciters and publishers.
@@ -34,7 +35,7 @@ If a source replaces a file, its timings stop matching and the surah has to be a
 - [`reciters.json`](reciters.json) lists the reciters. In `audioUrlTemplate`, `{ch3}` is the surah number
   padded to three digits (`036`); in `timingsUrlTemplate`, `{ch}` is the plain number (`36`). `chapters` lists
   the surahs that have timings. `partial` names surahs whose recording holds only some ayahs (`{"36": [1, 27]}`
-  means ayahs 1 to 27), and `leftOut` names ayahs the aligner could not time (most are recited; see above).
+  means ayahs 1 to 27), and `leftOut` names ayahs the aligner could not time (they are recited; see above).
 - `timings/<reciter>/<surah>.json` holds one surah, for example:
 
 ```json
@@ -48,7 +49,7 @@ Times are milliseconds from the start of the audio file. A segment is `[word pos
 ayah's words as Quran.com does. The first ayah starts at 0, so the isti'adha and basmala before it play with it.
 An ayah marked `"left_out": true` has no segments: the aligner could not time it. The name is kept so existing
 players keep working, but it does not mean the recording leaves the ayah out (see Reciters); show its text, unlit,
-from the end of the last timed word before it to the start of the next timed ayah. The audio files checked (one per reciter) are constant bitrate, so a player seeking to an ayah
+from the end of the last timed word before it to the start of the next timed word. The audio files checked (one per reciter) are constant bitrate, so a player seeking to an ayah
 lands where it should.
 
 ## How the timings were made
@@ -69,8 +70,9 @@ lands where it should.
 5. **Checks.** A surah is published only when at least 97% of its words are placed, at most 3% of them (or one
    word) have unclear letters, no more than three unclear words come in a row, and at most 10% of its ayahs (or
    one ayah) are passed over. A passed-over ayah was meant to be accepted only when its letters were not heard in the
-   audio around it, and each was checked by eye against the model's transcript; the 2026-10-25 check above shows that
-   test was not reliable, so these ayahs are now described as untimed, not as left out of the recording. When a
+   audio around it, and each was checked by eye against the model's transcript; the 2026-10-25 check above showed
+   that test was not reliable, so these ayahs are described as untimed, not as left out of the recording, and a
+   surah is held back when an untimed ayah has no room of its own between its neighbours. When a
    recording holds only the first part of a surah, the ayah it stops after is found from the model's reading of
    its last minute and a half, and only those ayahs are timed. Such recordings are not published yet, because a
    player would show the next ayah while the rest of the file plays.

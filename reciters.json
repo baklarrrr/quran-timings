@@ -1,7 +1,7 @@
 {
  "version": 1,
- "generated": "2026-10-25T09:16:24-04:00",
- "about": "Word-by-word timings for full-surah recitations, made by forced alignment. Audio streams from each source; it is not copied here. {ch3} is the surah number padded to three digits, {ch} unpadded.",
+ "generated": "2026-10-25T12:27:20-04:00",
+ "about": "Word-by-word timings for full-surah recitations, made by forced alignment. Audio streams from each source; it is not copied here. {ch3} is the surah number padded to three digits, {ch} unpadded. leftOut names ayahs the aligner could not time; they are recited, so show them unlit.",
  "reciters": [
   {
    "id": "yasser-dosari",
@@ -205,7 +205,6 @@
     52,
     53,
     54,
-    55,
     56,
     57,
     58,
@@ -229,7 +228,6 @@
     76,
     77,
     78,
-    79,
     80,
     81,
     82,
@@ -241,7 +239,6 @@
     88,
     89,
     90,
-    91,
     92,
     93,
     94,
@@ -252,7 +249,6 @@
     99,
     100,
     101,
-    102,
     103,
     104,
     105,
@@ -273,29 +269,12 @@
     "37": [
      175
     ],
-    "55": [
-     18,
-     45,
-     49,
-     51,
-     61,
-     63
-    ],
     "77": [
      34,
      45
     ],
-    "79": [
-     3
-    ],
-    "91": [
-     4
-    ],
     "94": [
      5
-    ],
-    "102": [
-     4
     ]
    },
    "aligned": "CTC forced alignment, W:\\Code\\QuranVoice\\align"
@@ -460,7 +439,6 @@
    "chapters": [
     1,
     2,
-    3,
     5,
     6,
     7,
@@ -528,7 +506,6 @@
     76,
     77,
     78,
-    79,
     80,
     81,
     82,
@@ -566,9 +543,6 @@
     114
    ],
    "leftOut": {
-    "3": [
-     70
-    ],
     "55": [
      36,
      47
@@ -581,9 +555,6 @@
     ],
     "77": [
      47
-    ],
-    "79": [
-     3
     ],
     "102": [
      3
