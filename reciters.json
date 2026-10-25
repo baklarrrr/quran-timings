@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated": "2026-10-25T12:27:20-04:00",
+ "generated": "2026-10-25T13:37:42-04:00",
  "about": "Word-by-word timings for full-surah recitations, made by forced alignment. Audio streams from each source; it is not copied here. {ch3} is the surah number padded to three digits, {ch} unpadded. leftOut names ayahs the aligner could not time; they are recited, so show them unlit.",
  "reciters": [
   {

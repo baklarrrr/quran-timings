@@ -27,7 +27,9 @@ say the reciter left it out. A surah where that stretch is too short to hold the
 neighbouring word's timing) is held back until it is aligned again.
 
 All are Hafs 'an 'Asim, murattal. [mp3quran.net](https://mp3quran.net/eng) offers a free public API for
-developers but states no licence for its audio; the recordings remain the work of their reciters and publishers.
+developers, and the "Copyrights" clause on its [privacy page](https://www.mp3quran.net/eng/privacy) lets any
+visitor or developer copy the site's material and use its links. That speaks for the site, not for the reciters:
+the recordings remain the work of their reciters and publishers.
 If a source replaces a file, its timings stop matching and the surah has to be aligned again.
 
 ## Files
